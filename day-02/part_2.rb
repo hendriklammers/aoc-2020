@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 def valid?(pos, letter, password)
   chars = password.split('')
   [chars[pos[0] - 1], chars[pos[1] - 1]].filter { |c| c == letter }.size == 1

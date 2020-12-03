@@ -1,10 +1,8 @@
-#!/usr/bin/env ruby
-
 def valid?(range, letter, password)
   count = password.split('').reduce(0) do |total, char|
     char == letter ? total + 1 : total
   end
-  count >= range[0] and count <= range[1]
+  count.between?(range[0], range[1])
 end
 
 def validate_password(str)
